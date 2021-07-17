@@ -101,6 +101,7 @@ function valid(req,res,next){
 	res.redirect('/signin');
 }
 
-app.listen(3000,(req,res)=>{
-	console.log("Server running on port 3000");
-});
+const port = process.env.PORT || 3000;
+app.listen(port, () => {
+    console.log(`Serving on port ${port}`)
+}) 
