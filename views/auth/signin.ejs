@@ -1,0 +1,30 @@
+<%-include("../partials/header")%>
+
+
+<div class="container">
+	
+		<h2 style="margin-top:100px;"class="text-center">Sign In </h2>
+		<div style="width:30%;margin:20px auto;">
+			<form class="" method="POST" action="/signin">
+				<div class="form-group">
+					<input class="form-control" type="text" name="username" placeholder="username">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="password" placeholder="password">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary btn-block">Sign In</button>
+				</div>
+				<%if(error){%>
+				<div class="form-group">
+					<p><%=error%>!!</p>
+				</div>
+				<%}%>
+				
+			</form>
+			Didn't have an account? <a href="/signup">Sign up</a>
+		</div>
+</div>
+
+
+<%-include("../partials/footer")%>

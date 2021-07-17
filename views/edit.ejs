@@ -1,0 +1,28 @@
+
+<%-include("./partials/header")%>
+
+<div class="container">
+	
+		<h2 style="margin-top:100px;"class="text-center">Edit form</h2>
+		<div style="width:30%;margin:20px auto;">
+			<form class="" method="POST" action="/user/<%=id%>/edit">
+				<div class="form-group">
+					<input class="form-control" type="text" name="oldlink" placeholder="Old link">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="newtitle" placeholder="New Title">
+				</div>
+				<div class="form-group">
+					<input class="form-control" type="text" name="newlink" placeholder="New Link">
+				</div>
+				<div class="form-group">
+					<button class="btn btn-primary btn-block">Edit</button>
+				</div>
+			</form>
+			<a href='/user/<%=id%>'>Go Back</a>
+		</div>
+</div>
+
+
+
+<%-include("./partials/footer")%>

@@ -1,0 +1,91 @@
+<%-include("./partials/header")%>
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Hind:wght@300&display=swap" rel="stylesheet">
+<style type="text/css">
+
+.ll{
+	color:#333131;
+	font-size:20px;
+	font-weight:600;
+	text-decoration:none;
+}
+.ll:hover{
+	color:#333131;
+	text-decoration:underline;
+}
+
+.hh{
+	margin-top:8px;
+	margin-bottom:8px;
+	font-size:18px;
+	font-weight:500;
+	font-family:'Hind';
+}
+.tt{
+	margin-left:450px;
+}
+#uu{
+	background-color:#262525;
+	min-height:100vh;
+	position:fixed;
+}
+.io{
+	margin-top:50px;
+	color:#ffffff;
+	font-size:20px;
+	font-weight:500;
+}
+.io:hover{
+	color:#ffffff;
+	text-decoration:underline;
+}
+.page{
+	margin-top:50px;
+}
+.head{
+	color:#ffffff;
+	font-size:24px;
+	font-weight:700;
+	text-decoration:none;
+}
+</style>
+
+<div class="row">
+	<div class="col-md-3" id="uu">
+		<div class="leftside text-center">
+			<br>
+			<br>
+			<br>
+			<br>
+			<p class="head">Hi, <%=arr.username%></p>
+			<br>
+			<br><br>
+
+			<p><a class="io" href="/user/<%=arr.id%>/add">Add</a></p>
+			<p><a class="io" href="/user/<%=arr.id%>/edit">Edit</a></p>
+			<p><a class="io" href="/user/<%=arr.id%>/delete">Delete</a></p>
+			<p><a class="io" href="/logout">logout</a></p>
+		</div>
+	</div>
+
+	<div class="container col-md-9 tt">
+		<div class="right-side">
+		<%if(arr.info[0].links==0){%>
+		 <h1 class="page">Please Add some Links :) </h1>
+		<%}%>
+			<%for(let record of arr.info){%>
+				<div class="container page">
+					<%if(record.links.length){%>
+					<div class="date"><h1>Links for <%=record.date%></h1></div>
+					<p class="hh">Here are some links I found interesting this week</p>
+					<%for(let content of record.links){%>
+						<li><a class="ll" href="<%=content.link%>"><%=content.title%></a></li>
+					<%}%>
+					<%}%>
+				</div>
+			<%}%>
+		</div>
+	</div>
+</div>
+<%-include("./partials/footer")%>
