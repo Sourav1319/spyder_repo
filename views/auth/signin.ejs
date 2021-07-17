@@ -1,5 +1,9 @@
 <%-include("../partials/header")%>
-
+<style type="text/css">
+	.pp{
+	color:red;
+	}
+</style>
 
 <div class="container">
 	
@@ -17,7 +21,7 @@
 				</div>
 				<%if(error){%>
 				<div class="form-group">
-					<p><%=error%>!!</p>
+					<p class="pp"><%=error%>!!</p>
 				</div>
 				<%}%>
 				

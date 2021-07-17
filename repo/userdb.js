@@ -42,6 +42,7 @@ class userdb_repo{
 					}
 				}
 				if(found){
+					record.date=datetime;
 					var obj={};
 					obj.date=datetime;
 					obj.links=[newdata];
@@ -54,12 +55,13 @@ class userdb_repo{
 		}
 		await this.writeAll(records);
 	}
-	async create(id,name){
+	async create(id,name,image){
 		const records=await this.getAll();
 		var obj={};
 		obj.id=id;
 		obj.username=name;
 		obj.date=datetime;
+		obj.image=image;
 		obj.info=[{
 				date:datetime,
 				links:[]

@@ -6,7 +6,7 @@
 
 .ll{
 	color:#333131;
-	font-size:20px;
+	font-size:19px;
 	font-weight:600;
 	text-decoration:none;
 }
@@ -16,8 +16,8 @@
 }
 
 .hh{
-	margin-top:8px;
-	margin-bottom:8px;
+	margin-top:10px;
+	margin-bottom:10px;
 	font-size:18px;
 	font-weight:500;
 	font-family:'Hind';
@@ -49,6 +49,12 @@
 	font-weight:700;
 	text-decoration:none;
 }
+.avatar {
+  vertical-align: middle;
+  width: 110px;
+  height: 110px;
+  border-radius: 60%;
+}
 </style>
 
 <div class="row">
@@ -56,22 +62,28 @@
 		<div class="leftside text-center">
 			<br>
 			<br>
-			<br>
-			<br>
+			<a href="#"><img src="<%=arr.image%>" alt="Avatar" class="avatar"></a>
+			<br><br>
+			<%if(reid===arr.id){%>
 			<p class="head">Hi, <%=arr.username%></p>
+			<%}%>
 			<br>
 			<br><br>
 
-			<p><a class="io" href="/user/<%=arr.id%>/add">Add</a></p>
-			<p><a class="io" href="/user/<%=arr.id%>/edit">Edit</a></p>
-			<p><a class="io" href="/user/<%=arr.id%>/delete">Delete</a></p>
-			<p><a class="io" href="/logout">logout</a></p>
+			<%if(reid===arr.id){%>
+				<p><a class="io" href="/user/<%=arr.id%>/add">Add</a></p>
+				<p><a class="io" href="/user/<%=arr.id%>/edit">Edit</a></p>
+				<p><a class="io" href="/user/<%=arr.id%>/delete">Delete</a></p>
+				<p><a class="io" href="/logout">logout</a></p>
+				<%}else{%>
+					<p class="io">Hello, Mr. Anonymous</p>
+				<%}%>
 		</div>
 	</div>
 
 	<div class="container col-md-9 tt">
 		<div class="right-side">
-		<%if(arr.info[0].links==0){%>
+		<%if(arr.info.length==1&&arr.info[0].links==0){%>
 		 <h1 class="page">Please Add some Links :) </h1>
 		<%}%>
 			<%for(let record of arr.info){%>

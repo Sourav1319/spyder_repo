@@ -4,20 +4,17 @@ var user_repo=require('./repo/users');
 var userdb_repo=require('./repo/userdb');
 var cookieSession=require('cookie-session');
 var app=express();
-// var datetime = currentdate.getDate() + "/"
-//                 + (currentdate.getMonth()+1)  + "/" 
-//                 + currentdate.getFullYear();
-//  console.log(datetime);
+
 app.use(bodyparser.urlencoded({extended:true}));
 
 app.use(cookieSession({
-	keys:['1234567']
+	keys:['12345678']
 }));
 
 app.set("view engine","ejs");
 
 app.get('/',valid,(req,res)=>{
-	res.send("hi there :");
+	res.redirect('/signin');
 })
 app.get('/signup',(req,res)=>{
 	res.render('auth/signup',{error:''});
@@ -31,8 +28,11 @@ app.post('/signup',async(req,res)=>{
 	if(existinguser){
 		res.render('auth/signup',{error:'User with given username already exists'});
 	}else{
+		if(req.body.image.length===0){
+			req.body.image="https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg";
+		}
 		const user=await user_repo.create(req.body);
-		await userdb_repo.create(user.id,user.username);
+		await userdb_repo.create(user.id,user.username,user.image);
 		req.session.userID=user.id;
 		res.redirect(`/user/${user.id}`);
 	}	
@@ -67,10 +67,10 @@ app.post('/user/:id/add',valid,async(req,res)=>{
 	await userdb_repo.pushdata(req.params.id,req.body);
 	res.redirect(`/user/${req.params.id}`);
 })
-app.get('/user/:id/edit',(req,res)=>{
+app.get('/user/:id/edit',valid,(req,res)=>{
 	res.render('edit',{id:req.params.id});
 })
-app.post('/user/:id/edit',async(req,res)=>{
+app.post('/user/:id/edit',valid,async(req,res)=>{
 	var oldobj={};
 	oldobj.link=req.body.oldlink;
 	var newobj={};
@@ -79,23 +79,23 @@ app.post('/user/:id/edit',async(req,res)=>{
 	await userdb_repo.edit(req.params.id,oldobj,newobj);
 	res.redirect(`/user/${req.params.id}`);
 })
-app.get('/user/:id/delete',(req,res)=>{
+app.get('/user/:id/delete',valid,(req,res)=>{
 	res.render('delete',{id:req.params.id});
 })
-app.post('/user/:id/delete',async(req,res)=>{
+app.post('/user/:id/delete',valid,async(req,res)=>{
 	await userdb_repo.delete(req.params.id,req.body);
 	res.redirect(`/user/${req.params.id}`);
 })
-app.get('/user/:id',valid,async(req,res)=>{
+app.get('/user/:id',async(req,res)=>{
+
 	const obj=await userdb_repo.getById(req.params.id);
-	// userdb_repo.nuweek()
-	res.render('userpage',{arr:obj});
+	res.render('userpage',{arr:obj,reid:req.session.userID});
 })
 app.get('/error',(req,res)=>{
 	res.send('Page does not exist');
 })
 function valid(req,res,next){
-	if(req.session.userID){
+	if(req.session.userID===req.params.id){
 		return next();
 	}
 	res.redirect('/signin');
