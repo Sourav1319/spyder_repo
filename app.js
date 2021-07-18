@@ -20,6 +20,8 @@ app.get('/signup',(req,res)=>{
 })
 
 app.post('/signup',async(req,res)=>{
+	req.body.username=req.body.username.trim().toLowerCase();
+	req.body.password=req.body.password.trim();
 	const existinguser=await user_repo.check(req.body);
 	if(!req.body.password.length){
 		res.render('auth/signup',{error:'Please enter a valid password'});
@@ -42,7 +44,8 @@ app.get('/signin',(req,res)=>{
 })
 
 app.post('/signin',async (req,res)=>{
-
+	req.body.username=req.body.username.trim().toLowerCase();
+	req.body.password=req.body.password.trim();
 	const user=await user_repo.check(req.body);
 	if(user&&req.body.password===user.password){
 		req.session.userID=user.id;

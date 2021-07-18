@@ -76,7 +76,9 @@
 				<p><a class="io" href="/user/<%=arr.id%>/delete">Delete</a></p>
 				<p><a class="io" href="/logout">logout</a></p>
 				<%}else{%>
-					<p class="io">Hello, Mr. Anonymous</p>
+					<p class="io">Hello, Mr. Anonymous, You are currently viewing the spyder repo of User-<%=arr.username%></p>
+					<br><br>
+					<p><a class="io" href="/signin">Sign in</a></p>
 				<%}%>
 		</div>
 	</div>
