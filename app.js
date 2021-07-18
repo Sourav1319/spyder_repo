@@ -7,8 +7,7 @@ var app=express();
 
 app.use(bodyparser.urlencoded({extended:true}));
 
-app.use(cookieSession({
-	keys:['12345678']
+app.use(cookieSession({keys:['12345678']
 }));
 
 app.set("view engine","ejs");
@@ -43,6 +42,7 @@ app.get('/signin',(req,res)=>{
 })
 
 app.post('/signin',async (req,res)=>{
+
 	const user=await user_repo.check(req.body);
 	if(user&&req.body.password===user.password){
 		req.session.userID=user.id;

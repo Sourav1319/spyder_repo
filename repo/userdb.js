@@ -98,6 +98,7 @@ class userdb_repo{
 		}
 
 	}
+	
 	async delete(id,data){
 		const records=await this.getAll();
 		let found=false;
@@ -114,7 +115,6 @@ class userdb_repo{
 						}
 					}
 					if(found){
-						// console.log("ef4");
 						record.info[j].links=nu;
 						await this.writeAll(records);return;
 					}

@@ -79,7 +79,7 @@ class repo_user{
 		const records=await this.getAll();
 
 		for(let record of records){
-			if(record['username']==attrs['username'])return record;
+			if(record.username===attrs.username)return record;
 		}
 	}
 }
