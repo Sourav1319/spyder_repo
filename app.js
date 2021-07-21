@@ -95,7 +95,7 @@ app.get('/user/:id',async(req,res)=>{
 	res.render('userpage',{arr:obj,reid:req.session.userID});
 })
 app.get('/:id',(req,res)=>{
-	res.send('<img style="width:100%;" src="/images/404.gif">');
+	res.send('<h1>This page does not exist</h1>');
 })
 function valid(req,res,next){
 	if(req.session.userID===req.params.id){
