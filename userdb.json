@@ -1,15 +1,15 @@
 [
   {
-    "id": "63c72ad0",
-    "username": "sourav ",
-    "date": "18/7/2021",
+    "id": "48fd989b",
+    "username": "sourav",
+    "date": "21/7/2021",
     "image": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
     "info": [
       {
-        "date": "18/7/2021",
+        "date": "21/7/2021",
         "links": [
           {
-            "title": "tesla dialoge -- the prestige (2006)",
+            "title": "Jensen Huang-The First Six Months of NVIDIA",
             "link": "https://www.youtube.com/watch?v=88_6SQKuTHk"
           },
           {
@@ -19,7 +19,7 @@
         ]
       },
       {
-        "date": "10/7/2021",
+        "date": "12/7/2021",
         "links": [
           {
             "title": "HOW AN F STUDENT BECAME AMERICA’S MOST PROLIFIC INVENTOR",
@@ -36,10 +36,6 @@
           {
             "title": "Build & Publish a Custom Google Chrome Extension",
             "link": "https://www.youtube.com/watch?v=wHZCYi1K664"
-          },
-          {
-            "title": "Jensen Huang-The First Six Months of NVIDIA",
-            "link": "https://www.youtube.com/watch?v=yU3GUHDf0mk"
           }
         ]
       }

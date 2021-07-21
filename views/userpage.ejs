@@ -26,7 +26,7 @@
 	margin-left:450px;
 }
 #uu{
-	background-color:#262525;
+	background-color:#0c024d;
 	min-height:100vh;
 	position:fixed;
 }
@@ -54,6 +54,10 @@
   width: 110px;
   height: 110px;
   border-radius: 60%;
+}
+.pic{
+	margin-top:40px;
+	width:600px;
 }
 </style>
 
@@ -87,6 +91,7 @@
 		<div class="right-side">
 		<%if(arr.info.length==1&&arr.info[0].links==0){%>
 		 <h1 class="page">Please Add some Links :) </h1>
+		 <img class="pic" src="/images/22u48j.jpg">
 		<%}%>
 			<%for(let record of arr.info){%>
 				<div class="container page">
