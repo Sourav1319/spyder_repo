@@ -9,7 +9,6 @@ app.use(bodyparser.urlencoded({extended:true}));
 
 app.use(cookieSession({keys:['12345678']
 }));
-app.use(express.static(__dirname+'/public'));
 app.set("view engine","ejs");
 
 app.get('/',valid,(req,res)=>{
