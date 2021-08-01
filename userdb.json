@@ -2,13 +2,9 @@
   {
     "id": "48fd989b",
     "username": "sourav",
-    "date": "28/7/2021",
+    "date": "21/7/2021",
     "image": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
     "info": [
-      {
-        "date": "28/7/2021",
-        "links": []
-      },
       {
         "date": "21/7/2021",
         "links": [
@@ -19,6 +15,10 @@
           {
             "title": "Jeremy Howard: fast.ai Deep Learning Courses and Research | Lex Fridman Podcast #35",
             "link": "https://www.youtube.com/watch?v=J6XcP4JOHmk"
+          },
+          {
+            "title": "Jeff Bezos: The electricity metaphor",
+            "link": "https://www.youtube.com/watch?v=vMKNUylmanQ"
           }
         ]
       },
@@ -42,18 +42,6 @@
             "link": "https://www.youtube.com/watch?v=wHZCYi1K664"
           }
         ]
-      }
-    ]
-  },
-  {
-    "id": "188642b8",
-    "username": "1319",
-    "date": "25/7/2021",
-    "image": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
-    "info": [
-      {
-        "date": "25/7/2021",
-        "links": []
       }
     ]
   }
