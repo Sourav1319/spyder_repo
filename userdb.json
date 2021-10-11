@@ -2,11 +2,53 @@
   {
     "id": "48fd989b",
     "username": "sourav",
-    "date": "21/7/2021",
+    "date": "10/10/2021",
     "image": "https://t3.ftcdn.net/jpg/03/46/83/96/360_F_346839683_6nAPzbhpSkIpb8pmAwufkC7c5eD7wYws.jpg",
     "info": [
       {
-        "date": "21/7/2021",
+        "date": "10/10/2021",
+        "links": [
+          {
+            "title": "AlphaGo - The Movie | Full award-winning documentary",
+            "link": "https://www.youtube.com/watch?v=WXuK6gekU1Y"
+          },
+          {
+            "title": "Why Did Facebook Go Down? - Computerphile",
+            "link": "https://www.youtube.com/watch?v=Bie32IZlMtY&t=24s"
+          }
+        ]
+      },
+      {
+        "date": "30/9/2021",
+        "links": [
+          {
+            "title": "Chomsky and Prashad: The reality behind the US ‘withdrawal’ from Afghanistan",
+            "link": "https://chomsky.info/20210507-2/"
+          },
+          {
+            "title": "Mindscape 134 | Robert Sapolsky on Why We Behave the Way We Do",
+            "link": "https://www.youtube.com/watch?v=pcPZ0Z0bO1o"
+          },
+          {
+            "title": "Symphony of Science - the Quantum World!",
+            "link": "https://www.youtube.com/watch?v=DZGINaRUEkU"
+          },
+          {
+            "title": "Apple - Think Different - Full Version",
+            "link": "https://www.youtube.com/watch?v=5sMBhDv4sik"
+          },
+          {
+            "title": "Salesforce Founder Marc Benioff on The David Rubenstein Show",
+            "link": "https://www.youtube.com/watch?v=VPV0idcPJ0s"
+          },
+          {
+            "title": "Competition is for Losers with Peter Thiel (How to Start a Startup 2014: 5)",
+            "link": "https://www.youtube.com/watch?v=3Fx5Q8xGU8k"
+          }
+        ]
+      },
+      {
+        "date": "21/9/2021",
         "links": [
           {
             "title": "Jensen Huang-The First Six Months of NVIDIA",
@@ -15,15 +57,11 @@
           {
             "title": "Jeremy Howard: fast.ai Deep Learning Courses and Research | Lex Fridman Podcast #35",
             "link": "https://www.youtube.com/watch?v=J6XcP4JOHmk"
-          },
-          {
-            "title": "Jeff Bezos: The electricity metaphor",
-            "link": "https://www.youtube.com/watch?v=vMKNUylmanQ"
           }
         ]
       },
       {
-        "date": "12/7/2021",
+        "date": "12/9/2021",
         "links": [
           {
             "title": "HOW AN F STUDENT BECAME AMERICA’S MOST PROLIFIC INVENTOR",

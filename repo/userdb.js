@@ -30,7 +30,12 @@ class userdb_repo{
 				let newdate=currentdate.getDate();
 				let date_=parseInt(record.date[0]+record.date[1]);
 				let month=currentdate.getMonth()+1;
-				let date_month=parseInt(record.date[3]+record.date[4]);
+				let date_month=0;
+				if(record.date[4]==='/'){
+					date_month=parseInt(record.date[3]);
+				}else {
+					date_month=parseInt(record.date[3]+record.date[4]);
+				}
 				let found=false;
 				if(date_month!=month){
 					if(month-date_month>1)found=true;

@@ -9,6 +9,7 @@ app.use(bodyparser.urlencoded({extended:true}));
 
 app.use(cookieSession({keys:['12345678']
 }));
+app.use(express.static(__dirname+'/public'));
 app.set("view engine","ejs");
 
 app.get('/',valid,(req,res)=>{
@@ -94,7 +95,7 @@ app.get('/user/:id',async(req,res)=>{
 	res.render('userpage',{arr:obj,reid:req.session.userID});
 })
 app.get('/:id',(req,res)=>{
-	res.send('<h1>This page does not exist</h1>');
+	res.send('<img style="width:100%;" src="/images/404.gif">');
 })
 function valid(req,res,next){
 	if(req.session.userID===req.params.id){

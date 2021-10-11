@@ -3,10 +3,20 @@
 	.pp{
 	color:red;
 	}
+	.ig {
+  background: url(images/uni.jpg) no-repeat center center fixed;
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  height:100vh;
+	}
+html, body {margin: 0; height: 100%; overflow: hidden}
 </style>
+<div class="ig">
 <div class="container">
 	
-		<h2 style="padding-top:150px;"class="text-center">Sign Up Form</h2>
+		<h2 style="padding-top:100px;"class="text-center">Sign Up Form</h2>
 		<div style="width:30%;margin:20px auto;">
 			<form class="" method="POST" action="/signup">
 				<div class="form-group">
@@ -28,11 +38,10 @@
 				<%}%>
 				
 			</form>
-			<p>For demo try, user:<em> sourav</em> and password:<em> 15476</em></p>
-			
-
-			<p>**Width and height of image must be equal to be correctly viewed as a avatar,the image field can be left empty.<a href="/signin">Sign In</a></p>
+			<p>For demo try Username:"sourav" and Password:"15476"</p>
+			<p>the image field can be left empty.<a href="/signin">Sign In</a></p>
 		</div>
+</div>
 </div>
 
 
